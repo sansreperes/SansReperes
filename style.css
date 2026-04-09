@@ -18,16 +18,20 @@ body.texture{
     url('paper-texture.jpg') center center / cover no-repeat fixed;
 }
 .screen {
-  height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 32px 20px;
 }
 .phone {
+  width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 200px;
+  justify-content: center;
+  gap: 36px;
 }
 .title{
   margin:0;
@@ -48,25 +52,26 @@ body.texture{
 .icon-wrap {
   width: 220px;
   height: 220px;
-  margin: 40px auto;
+  margin: 12px auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .status{
-  margin-top:auto;
-  margin-bottom: 6.5vh;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: clamp(15px, 2.25vw, 17px);
-  line-height:1.2;
-  letter-spacing:.02em;
+  line-height: 1.2;
+  letter-spacing: .02em;
   text-align: center;
 }
 .monoish{ font-family: "Courier New", Courier, monospace; }
 
-.loader{
-  position:relative;
-  width:214px;
-  height:214px;
+.loader {
+  position: relative;
+  width: 214px;
+  height: 214px;
+  margin-bottom: 20px;
 }
 .loader .seg{
   position:absolute;
