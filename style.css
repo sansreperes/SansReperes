@@ -1,0 +1,118 @@
+:root{
+  --bg:#efeee9;
+  --paper:#f5f4f0;
+  --text:#111;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.texture{
+  background:
+    linear-gradient(rgba(245,244,240,.0), rgba(245,244,240,.0)),
+    url('paper-texture.jpg') center center / cover no-repeat fixed;
+}
+.screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+}
+.title{
+  margin:0;
+  text-align: center;
+  font-size: clamp(20px, 3.15vw, 24px);
+  font-weight:800;
+  text-transform:uppercase;
+}
+.title.single{
+  margin-top: 1.2vh;
+  line-height:1;
+  letter-spacing:.02em;
+}
+.title.stacked{
+  line-height:1.18;
+  letter-spacing:.02em;
+}
+.icon-wrap {
+  width: 220px;
+  height: 220px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status{
+  margin-top:auto;
+  margin-bottom: 6.5vh;
+  font-size: clamp(15px, 2.25vw, 17px);
+  line-height:1.2;
+  letter-spacing:.02em;
+  text-align: center;
+}
+.monoish{ font-family: "Courier New", Courier, monospace; }
+
+.loader{
+  position:relative;
+  width:214px;
+  height:214px;
+}
+.loader .seg{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:18px;
+  height:46px;
+  margin-left:-9px;
+  margin-top:-23px;
+  background:#000;
+  opacity:0;
+  transform:
+    translate(calc(var(--x) * 1px), calc(var(--y) * 1px))
+    rotate(calc(var(--r) * 1deg));
+  transform-origin:center center;
+}
+.loader .seg.on{ opacity:1; }
+
+.circle-icon {
+  width: 100%;
+  height: 100%;
+  border: 6px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-icon::before,
+.circle-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 6px;
+  background: black;
+}
+
+.circle-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.circle-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.canada-icon {
+  width: 150%;
+  height: auto;
+}

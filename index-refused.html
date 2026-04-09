@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chargement</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script-loading.js"></script>
+</head>
+<body class="texture">
+  <main class="screen">
+    <section class="phone">
+      <h1 class="title single">CHARGEMENT</h1>
+
+      <div class="icon-wrap" aria-hidden="true">
+        <div class="loader" id="loader">
+          <span class="seg s1" style="--x:0;--y:-74;--r:0"></span>
+          <span class="seg s2" style="--x:-52.3;--y:-52.3;--r:-45"></span>
+          <span class="seg s3" style="--x:-74;--y:0;--r:90"></span>
+          <span class="seg s4" style="--x:-52.3;--y:52.3;--r:45"></span>
+          <span class="seg s5" style="--x:0;--y:74;--r:0"></span>
+          <span class="seg s6" style="--x:52.3;--y:52.3;--r:-45"></span>
+          <span class="seg s7" style="--x:74;--y:0;--r:90"></span>
+        </div>
+      </div>
+
+      <p class="status monoish" id="status-text">Transfert des<br>documents en cours</p>
+    </section>
+  </main>
+<<script>
+  setTimeout(function() {
+    window.location.href = "refused.html";
+  }, 18000);
+</script>
+</body>
+</html>
